@@ -5,10 +5,15 @@ window = tk.Tk()
 window.title('Checkbutton')
 window.geometry('500x500')
 
-chk_state = tk.BooleanVar()
-chk_state.set(True)
 
-chk = Checkbutton(window, text='Select', var=chk_state)
-chk.grid(column=0, row=0)
+def show_status():
+    l1 = tk.Label(window, text=str(chk_state.get())).pack()
+
+
+chk_state = tk.BooleanVar()
+chk_state.set(False)
+
+chk = Checkbutton(window, text='Select', var=chk_state, command=show_status)
+chk.pack()
 
 window.mainloop()

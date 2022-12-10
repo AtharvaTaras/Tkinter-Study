@@ -10,6 +10,7 @@ l1.grid(column=0, row=3)
 def clicked():
     l1.configure(text='Button was clicked!')
 
+
 bt1 = tk.Button(window, text='Ok')
 bt1.grid(column=1, row=0)
 
